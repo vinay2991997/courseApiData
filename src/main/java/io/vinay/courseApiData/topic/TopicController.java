@@ -21,19 +21,19 @@ public class TopicController {
         return topicService.getById(id);
     }
 
-    @RequestMapping(method = RequestMethod.POST , value = "/topics")
+    @RequestMapping(method = RequestMethod.POST, value = "/topics")
     public void addTopic(@RequestBody Topic topic) {
 
         topicService.addTopic(topic);
     }
 
-    @RequestMapping(method = RequestMethod.PUT , value = "/topics/{id}")
+    @RequestMapping(method = RequestMethod.PUT, value = "/topics/{id}")
     public void updatetopic(@PathVariable String id, @RequestBody Topic topic) {
-        topicService.updateTopic(id,topic);
+        topicService.updateTopic(id, topic);
     }
 
-    @RequestMapping(method = RequestMethod.DELETE , value = "/topics/{id}")
-    public void delete(@PathVariable String id){
+    @RequestMapping(method = RequestMethod.DELETE, value = "/topics/{id}")
+    public void delete(@PathVariable String id) {
         topicService.deleteById(id);
     }
 }

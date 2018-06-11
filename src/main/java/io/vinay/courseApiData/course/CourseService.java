@@ -17,12 +17,12 @@ public class CourseService {
 
 
     public List<Course> getAllCourses(String topicId) {
-        
+
         return courseRepository.findByTopicId(topicId);
 
     }
 
-    public Course getById(String topicId,String id) {
+    public Course getById(String topicId, String id) {
 
         return courseRepository.
                 findByTopicId(topicId).
@@ -34,14 +34,14 @@ public class CourseService {
     }
 
     public void addCourses(String topicId, Course course) {
-        course.setTopic(new Topic(topicId,"",""));
+        course.setTopic(new Topic(topicId, "", ""));
         courseRepository.save(course);
     }
 
 
-    public void updateCourses(String topicId,String id, Course course) {
+    public void updateCourses(String topicId, String id, Course course) {
 
-        course.setTopic(new Topic(topicId,"",""));
+        course.setTopic(new Topic(topicId, "", ""));
         courseRepository.save(course);
 
     }

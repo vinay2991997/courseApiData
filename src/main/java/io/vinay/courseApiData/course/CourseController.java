@@ -18,23 +18,23 @@ public class CourseController {
 
     @RequestMapping("/topics/{topicId}/courses/{id}")
     public Course getById(@PathVariable String topicId, @PathVariable String id) {
-        return courseService.getById(topicId,id);
+        return courseService.getById(topicId, id);
         //return courseService.getById(id);
     }
 
-    @RequestMapping(method = RequestMethod.POST , value = "/topics/{topicId}/courses")
-    public void addCourses(@PathVariable String topicId,@RequestBody Course course) {
+    @RequestMapping(method = RequestMethod.POST, value = "/topics/{topicId}/courses")
+    public void addCourses(@PathVariable String topicId, @RequestBody Course course) {
 
         courseService.addCourses(topicId, course);
     }
 
-    @RequestMapping(method = RequestMethod.PUT , value = "/topics/{topicId}/courses/{id}")
+    @RequestMapping(method = RequestMethod.PUT, value = "/topics/{topicId}/courses/{id}")
     public void updateCourses(@PathVariable String topicId, @PathVariable String id, @RequestBody Course course) {
         courseService.updateCourses(topicId, id, course);
     }
 
-    @RequestMapping(method = RequestMethod.DELETE , value = "/topics/{topicId}/courses/{id}")
-    public void deleteCourses(@PathVariable String id){
+    @RequestMapping(method = RequestMethod.DELETE, value = "/topics/{topicId}/courses/{id}")
+    public void deleteCourses(@PathVariable String id) {
         courseService.deleteById(id);
     }
 }
