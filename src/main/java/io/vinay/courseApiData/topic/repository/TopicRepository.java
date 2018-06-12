@@ -1,7 +1,7 @@
-package io.vinay.courseApiData.topic;
+package io.vinay.courseApiData.topic.repository;
 
+import io.vinay.courseApiData.topic.model.Topic;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
 
 public interface TopicRepository extends JpaRepository<Topic, String> {
 

@@ -1,7 +1,7 @@
-package io.vinay.courseApiData.course;
+package io.vinay.courseApiData.course.repository;
 
+import io.vinay.courseApiData.course.model.Course;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 

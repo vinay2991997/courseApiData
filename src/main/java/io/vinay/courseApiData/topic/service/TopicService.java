@@ -1,5 +1,7 @@
-package io.vinay.courseApiData.topic;
+package io.vinay.courseApiData.topic.service;
 
+import io.vinay.courseApiData.topic.model.Topic;
+import io.vinay.courseApiData.topic.repository.TopicRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,13 +14,9 @@ public class TopicService {
     @Autowired
     private TopicRepository topicRepository;
 
-    private List<Topic> topics;
-
-
     public List<Topic> getAllTopics() {
-        List<Topic> topics = new ArrayList<>();
-        topicRepository.findAll().forEach(topics::add);
-        return topics;
+
+        return topicRepository.findAll();
     }
 
     public Topic getById(String id) {

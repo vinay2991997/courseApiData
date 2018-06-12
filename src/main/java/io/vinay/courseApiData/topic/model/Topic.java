@@ -1,4 +1,4 @@
-package io.vinay.courseApiData.topic;
+package io.vinay.courseApiData.topic.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

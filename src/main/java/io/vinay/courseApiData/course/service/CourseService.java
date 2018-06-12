@@ -1,10 +1,11 @@
-package io.vinay.courseApiData.course;
+package io.vinay.courseApiData.course.service;
 
-import io.vinay.courseApiData.topic.Topic;
+import io.vinay.courseApiData.course.model.Course;
+import io.vinay.courseApiData.course.repository.CourseRepository;
+import io.vinay.courseApiData.topic.model.Topic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -13,13 +14,8 @@ public class CourseService {
     @Autowired
     private CourseRepository courseRepository;
 
-    private List<Course> courses;
-
-
     public List<Course> getAllCourses(String topicId) {
-
         return courseRepository.findByTopicId(topicId);
-
     }
 
     public Course getById(String topicId, String id) {

@@ -1,5 +1,7 @@
-package io.vinay.courseApiData.course;
+package io.vinay.courseApiData.course.controller;
 
+import io.vinay.courseApiData.course.service.CourseService;
+import io.vinay.courseApiData.course.model.Course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

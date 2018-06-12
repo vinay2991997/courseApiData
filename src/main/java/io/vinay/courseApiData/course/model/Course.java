@@ -1,6 +1,6 @@
-package io.vinay.courseApiData.course;
+package io.vinay.courseApiData.course.model;
 
-import io.vinay.courseApiData.topic.Topic;
+import io.vinay.courseApiData.topic.model.Topic;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
